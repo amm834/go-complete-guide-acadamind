@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	PI := math.Pi
+	const PI = math.Pi
 	radius := 5
 	circumference := 2 * PI * float64(radius)
 
