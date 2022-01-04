@@ -3,18 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	/*
-		 Declaration + Initialization
-		var greetingText string
-		greetingText = "Hello World!"
-	*/
 
-	/*
-		Initialization
-		var greetingText string = "Hello World!"
-	*/
+	//var greetingText string
+	//greetingText = "Hello World!"
 
-	// as Type inference in ts
+	//var greetingText string = "Hello World!"
+
 	greetingText := "Hello World!"
+
+	luckyNumber := 19
+	evenMoreLuckyNumber := luckyNumber + 1
+
 	fmt.Println(greetingText)
+	fmt.Println(luckyNumber)
+	fmt.Println(evenMoreLuckyNumber)
+
+	evenMoreLuckyNumber = luckyNumber * 2
+	fmt.Println(evenMoreLuckyNumber)
 }
