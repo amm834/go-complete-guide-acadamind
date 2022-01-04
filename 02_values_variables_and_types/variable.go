@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"firstapp/greeting"
+	"fmt"
+)
 
 func main() {
 
@@ -41,6 +44,8 @@ func main() {
 	lastName := "Moe"
 	fullName := fmt.Sprintf("%v %v", firstName, lastName)
 	age := 18
-	fmt.Printf("My name is %v and age is %v (Data Type of age: %T)", fullName, age, age)
+	fmt.Printf("My name is %v and age is %v (Data Type of age: %T)\n", fullName, age, age)
 	//fmt.Println("0" + 3)
+
+	fmt.Println(greeting.GreetingText)
 }

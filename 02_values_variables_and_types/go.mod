@@ -1,3 +1,2 @@
-module variable
-
+module firstapp
 go 1.16
