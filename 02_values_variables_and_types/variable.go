@@ -36,4 +36,9 @@ func main() {
 	var firstByte byte = 'A'
 	fmt.Println(firstByte)
 	fmt.Println(string(firstByte))
+
+	firstName := "Aung Myat"
+	lastName := "Moe"
+	fmt.Println(firstName + " " + lastName)
+	//fmt.Println("0" + 3)
 }
