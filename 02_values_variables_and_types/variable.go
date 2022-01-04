@@ -20,4 +20,7 @@ func main() {
 
 	evenMoreLuckyNumber = luckyNumber * 2
 	fmt.Println(evenMoreLuckyNumber)
+
+	var newLuckyNumber float64 = float64(luckyNumber) / 3
+	fmt.Println(newLuckyNumber)
 }
