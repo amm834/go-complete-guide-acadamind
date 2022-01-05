@@ -9,7 +9,8 @@ func main() {
 	a, b := printNumbers()
 	sum := sum(a, b)
 	fmt.Println(sum)
-	println("hello world")
+	printTextln("hello world")
+
 }
 
 func sum(a int, b int) (sum int) {
@@ -17,8 +18,8 @@ func sum(a int, b int) (sum int) {
 	return
 }
 
-func println(text string) {
-	fmt.Print(text)
+func printTextln(text string) {
+	fmt.Println(text)
 }
 
 func printNumbers() (int, int) {
