@@ -7,12 +7,14 @@ import (
 
 func main() {
 	a, b := printNumbers()
-	fmt.Println(sum(a, b))
+	sum := sum(a, b)
+	fmt.Println(sum)
 	println("hello world")
 }
 
-func sum(a int, b int) int {
-	return a + b
+func sum(a int, b int) (sum int) {
+	sum = a + b
+	return
 }
 
 func println(text string) {
