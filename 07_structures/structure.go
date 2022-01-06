@@ -21,13 +21,17 @@ func NewUser(fullName string, birthDate string) *User {
 	return &user
 }
 
+func printUser(user *User) {
+	fmt.Printf("My name is %v (born on %v)", user.fullName, user.birthDate)
+}
+
 func main() {
 	var newUser User
 	fullName := getInput("Enter your name: ")
 	birthDate := getInput("Enter yout birthday (DD/MM/YYYY): ")
 
 	newUser = *NewUser(fullName, birthDate)
-	fmt.Println(newUser)
+	printUser(&newUser)
 
 }
 
