@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -21,7 +22,7 @@ func NewUser(fullName string, birthDate string) *User {
 	return &user
 }
 
-func printUser(user *User) {
+func (user *User) printUser() {
 	fmt.Printf("My name is %v (born on %v)", user.fullName, user.birthDate)
 }
 
@@ -31,12 +32,12 @@ func main() {
 	birthDate := getInput("Enter yout birthday (DD/MM/YYYY): ")
 
 	newUser = *NewUser(fullName, birthDate)
-	printUser(&newUser)
-
+	newUser.printUser()
 }
 
 func getInput(promptText string) string {
 	fmt.Print(promptText)
 	input, _ := reader.ReadString('\n')
-	return input
+	cleaned := strings.ReplaceAll(input, "\n", "")
+	return cleaned
 }
