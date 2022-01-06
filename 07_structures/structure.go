@@ -16,14 +16,16 @@ type User struct {
 }
 
 func main() {
-	var user User
+	var newUser User
 	fullName := getInput("Enter your name: ")
 	birthDate := getInput("Enter yout birthday (DD/MM/YYYY): ")
 	createdAt := time.Now()
 
-	user = User{
-		fullName: fullName, birthDate: birthDate, createdAt: createdAt,
+	newUser = User{
+		fullName, birthDate, createdAt,
 	}
+	fmt.Println(newUser)
+
 }
 
 func getInput(promptText string) string {
