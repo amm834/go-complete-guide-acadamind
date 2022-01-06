@@ -15,10 +15,10 @@ type User struct {
 	createdAt time.Time
 }
 
-func NewUser(fullName string, birthDate string) User {
+func NewUser(fullName string, birthDate string) *User {
 	createdAt := time.Now()
 	user := User{fullName, birthDate, createdAt}
-	return user
+	return &user
 }
 
 func main() {
@@ -26,8 +26,8 @@ func main() {
 	fullName := getInput("Enter your name: ")
 	birthDate := getInput("Enter yout birthday (DD/MM/YYYY): ")
 
-	newUser = NewUser(fullName, birthDate)
-	fmt.Println(newUser.fullName)
+	newUser = *NewUser(fullName, birthDate)
+	fmt.Println(newUser)
 
 }
 
