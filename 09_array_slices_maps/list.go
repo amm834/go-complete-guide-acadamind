@@ -20,4 +20,10 @@ func main() {
 
 	featuredName := names[:1]
 	fmt.Println(len(featuredName), cap(featuredName))
+
+	// Dynamic slices
+	var products []string
+	// Append and unpacking
+	products = append(products, names[:]...)
+	fmt.Println(products)
 }
