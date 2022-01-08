@@ -25,7 +25,7 @@ func main() {
 	} else if input == "3" {
 		calculateUserEnteredNumber()
 	} else if input == "4" {
-
+		calculateListOfNumbers()
 	}
 }
 
@@ -35,6 +35,7 @@ func showMenuList() {
 		1) Sum up to x
 		2) Sum factoial x
 		3) Sum by Entering Numbers
+		4) Sum by Entering List of Numbers
 `)
 }
 
@@ -117,4 +118,27 @@ func calculateUserEnteredNumber() {
 		sum += input
 	}
 	fmt.Printf("Total Number: %d", sum)
+}
+
+func calculateListOfNumbers() {
+	fmt.Println("Enter numbers list separate with comma (ex: 1,2,3)")
+	fmt.Print("-> ")
+	inputList, err := reader.ReadString('\n')
+	inputList = strings.ReplaceAll(inputList, "\n", "")
+	if err != nil {
+		fmt.Println("Invalid Input")
+		return
+	}
+	inputNumbers := strings.Split(inputList, ",")
+	sum := 0
+	// for each lol
+	for _, value := range inputNumbers {
+		number, err := strconv.Atoi(value)
+		if err != nil {
+			continue
+		}
+		sum += number
+	}
+	fmt.Printf("Total Numbers: %v", sum)
+
 }
